@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mnist_service:
+    build:
+      context: .
+      dockerfile: Dockerfile.service
+    ports:
+      - "50051:50051"
+  mnist_client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    depends_on:
+      - mnist_service
