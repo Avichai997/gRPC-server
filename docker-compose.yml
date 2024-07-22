@@ -4,11 +4,23 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.service
+    volumes:
+      - .:/app
     ports:
       - "50051:50051"
+    networks:
+      - mnist_network
+
   mnist_client:
     build:
       context: .
       dockerfile: Dockerfile.client
+    volumes:
+      - .:/app
     depends_on:
       - mnist_service
+    networks:
+      - mnist_network
+
+networks:
+  mnist_network:
