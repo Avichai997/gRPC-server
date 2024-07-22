@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: Attach to mnist_service",
+      "name": "Python: Remote Attach (MNIST Service)",
       "type": "debugpy",
       "request": "attach",
       "connect": {
@@ -14,10 +14,11 @@
           "localRoot": "${workspaceFolder}",
           "remoteRoot": "/app"
         }
-      ]
+      ],
+      // "justMyCode": false
     },
     {
-      "name": "Python: Attach to mnist_client",
+      "name": "Python: Remote Attach (MNIST Client)",
       "type": "debugpy",
       "request": "attach",
       "connect": {
