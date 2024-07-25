@@ -38,21 +38,22 @@ This project implements a gRPC service that streams MNIST dataset samples to a c
 2. Run the following command to install gRPC tools:
    pip install grpcio grpcio-tools
 
-### Installation
+### Cloning
 
-1. Clone the repository.
-   git clone <repository-url>
+Clone the repository:
+```bash
+   git clone https://github.com/Avichai997/gRPC-server.git
    cd <repository-directory>
-
-2. Install the required Python packages.
-   pip install -r requirements.txt
+```
 
 ### Running the Service and Client
 
 1. Build and run the Docker containers.
+```bash
    docker-compose up --build
+```
 
-2. The client will connect to the service and start receiving MNIST samples, displaying each image and its label.
+2. The client will connect to the service and start receiving MNIST samples, saving each image and its label (limited to 15 images for the demonstration).
 
 ### Testing
 
